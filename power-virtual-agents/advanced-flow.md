@@ -1,15 +1,14 @@
 ---
-title: "Automate Power Virtual Agents bot actions with flows"
+title: "Automate chatbot actions with flows"
 description: "Retrieve data and automate processes in your Power Virtual Agents bot with flows."
-keywords: ""
-ms.date: 3/18/2020
-ms.service:
-  - dynamics-365-ai
+keywords: "PVA, flow, automate"
+ms.date: 9/22/2020
+ms.service: power-virtual-agents
 ms.topic: article
 author: iaanw
 ms.author: iawilt
 manager: shellyha
-ms.custom: flow
+ms.custom: flow, ceX, advanced-authoring
 ms.collection: virtual-agent
 ---
 
@@ -18,12 +17,18 @@ ms.collection: virtual-agent
 
 # Add actions to a bot using Power Automate 
 
+Select the version of Power Virtual Agents you're using here:
+
+> [!div class="op_single_selector"]
+> - [Power Virtual Agents web app](advanced-flow.md)
+> - [Power Virtual Agents app in Microsoft Teams](teams/advanced-flow-teams.md)
+
 You can enable your bot to perform an action by calling a Microsoft Power Automate flow. Flows can help you automate activities, or call backend systems. For example, you can use flows with [end-user authentication](advanced-end-user-authentication.md) to retrieve information about a user after they've signed in.
 
 You call flows from within topics, as a discrete **Call an action** node. You can utilize flows that have already been created in your [Power Apps environment](environments-first-run-experience.md), or you can create a flow from within the Power Virtual Agents [authoring canvas](authoring-create-edit-topics.md).
 
 >[!IMPORTANT]
->A flow can only be called from a topic located in the same [Common Data Service environment](/powerapps/maker/common-data-service/data-platform-intro) as your bot.
+>A flow can only be called from a topic located in the same [Microsoft Dataverse environment](/powerapps/maker/common-data-service/data-platform-intro) as your bot.
 >Flows must also be in a solution in Power Automate. You can [move flows into solutions](#optionally-move-a-flow-from-default-solution-to-another-solution) so they are listed in the authoring canvas.
 
 
@@ -192,7 +197,7 @@ You can rename and modify your flow on the Power Automate portal. For example, t
 
     ![Edit your flow using the Details page](media/FlowEditDetailsPage.png)
 
-    If you want to open a flow on the Power Automate portal, go to the **Solutions** tab and then open your flow's solution. Use the flow’s **Edit menu** to open the flow for editing.
+    If you want to open a flow on the Power Automate portal, go to the **Solutions** tab and then open your flow's solution. Use the flow's **Edit menu** to open the flow for editing.
 
     ![Open your flow for editing](media/EditFlow.jpg)
 
@@ -203,7 +208,7 @@ You can rename and modify your flow on the Power Automate portal. For example, t
     - Zipcode (Number)
 
 
-    ![Open your flow for editing](media/RenameFlow.jpg)
+    ![Add inputs to the flow](media/RenameFlow.jpg)
 
    
 
@@ -248,9 +253,9 @@ These instructions use adding weather information to a flow as an example. If yo
 1. Add the following **trigger phrases**:
 
     - will it rain
-    - today’s forecast
+    - today's forecast
     - get weather
-    - what’s the weather
+    - what's the weather
 
 1. Go to the **Authoring canvas** for the new topic.
 
@@ -273,13 +278,13 @@ These instructions use adding weather information to a flow as an example. If yo
 
 1. Map the flow input blocks to the output variables from the question nodes. **City (text)** gets its value from `Var1 (text)` and **Zipcode (number)** gets its value from `Var2 (number)`.
 
-1. Under the flow's node, add a **Message** node and then enter a message that uses the flow’s outputs. For example:
+1. Under the flow's node, add a **Message** node and then enter a message that uses the flow's outputs. For example:
 
     **Today's forecast for `(x)location`:`{x}day_summary`. 
     Chance of rain is `{x}chance_of_rain`%**
 
 
-    ![Call action](media/ActionNodeGetWeatherForecast.png)
+    ![Input the variables](media/ActionNodeGetWeatherForecast.png)
 
 
 1. Select **Save** to save your topic. 

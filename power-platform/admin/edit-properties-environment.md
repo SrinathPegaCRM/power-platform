@@ -2,11 +2,10 @@
 title: "Edit properties of an environment  | MicrosoftDocs"
 description: Edit properties of an environment 
 author: jimholtz
-manager: kvivek
 ms.service: power-platform
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 02/27/2020
+ms.date: 09/04/2020
 ms.author: jimholtz
 search.audienceType: 
   - admin
@@ -17,6 +16,8 @@ search.app:
   - Flow
 ---
 # Edit properties of an environment 
+
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 Administrators can edit properties of an environment, such as the friendly name, URL, and the purpose. However, environments that are being provisioned cannot be edited, and disabled environments must be enabled before they can be edited.  
   
@@ -29,13 +30,13 @@ Administrators can edit properties of an environment, such as the friendly name,
 3. Select **Edit**.
 
    > [!div class="mx-imgBorder"] 
-   > ![](media/select-edit.png "Select Edit")
+   > ![Select Edit](media/select-edit.png "Select Edit")
 
 4. Select any of the following field values that you want to change.  
   
-   - **Name**. This is typically the name of your organization and is displayed in the model-driven apps in Dynamics 365, such as Dynamics 365 Sales and Customer Service. After you save the change, it may take up to 5 minutes for the friendly name to appear in the application.  
+   - **Name**. This is typically the name of your organization and is displayed in the customer engagement apps (Dynamics 365 Sales, Dynamics 365 Customer Service, Dynamics 365 Field Service, Dynamics 365 Marketing, and Dynamics 365 Project Service Automation). After you save the change, it may take up to 5 minutes for the friendly name to appear in the application.  
   
-   - **URL**. The URL is used to construct the URL for users to sign in to model-driven apps in Dynamics 365. We recommend that you limit the length of the URL name to reduce the overall length of the URL.  
+   - **URL**. The URL is used to construct the URL for users to sign in to customer engagement apps. We recommend that you limit the length of the URL name to reduce the overall length of the URL.  
   
      > [!WARNING]
      >  There are important tasks that you must communicate to your users immediately following a URL name change.  

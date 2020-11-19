@@ -2,7 +2,7 @@
 title: "Known issues with document management | MicrosoftDocs"
 description: "Learn about known issues with document management"
 keywords: encrypt
-ms.date: 06/02/2020
+ms.date: 09/04/2020
 ms.service: powerapps
 ms.custom: 
 ms.topic: article
@@ -11,7 +11,6 @@ applies_to:
 ms.assetid: 
 author: Mattp123
 ms.author: matp
-manager: kvivek
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -26,6 +25,9 @@ search.app:
 ---
 
 # Known issues with document management
+
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 The customizations and configurations described here can cause issues with the document management feature. 
 
 ## Components from an Iframe
@@ -41,7 +43,7 @@ Examples include the following:
 If you experience unexpected behavior with the document management feature caused by a third-party solution, contact the third-party solution vendor. 
  
 ## "File not found" error when adding a file from a SharePoint site
-If you receive a **File not found** error or encounter a problem while adding a file from a SharePoint site or SharePoint subsite in model-driven apps in Dynamics 365, the likely cause is that you have not created the document location records in the model-driven app to point to these SharePoint document libraries and folders.
+If you receive a **File not found** error or encounter a problem while adding a file from a SharePoint site or SharePoint subsite in customer engagement apps (Dynamics 365 Sales, Dynamics 365 Customer Service, Dynamics 365 Field Service, Dynamics 365 Marketing, and Dynamics 365 Project Service Automation), the likely cause is that you have not created the document location records in the model-driven app to point to these SharePoint document libraries and folders.
 
 SharePoint document locations are records in model-driven apps, such as Dynamics 365 Sales and Customer Service, that point to a SharePoint document library or folder. To use any SharePoint site or subsite in SharePoint integration, you must run the Document Management Settings wizard once with the corresponding site URL, so that the document libraries are created in the site.
 
@@ -85,7 +87,7 @@ If you have more than 5000 documents in your document library, you can view the 
 ## Relationship must be one-to-many (1:N) between an entity and a SharePoint document entity 
 Users cannot see documents when many entities are pointing to a SharePoint document location, a many-to-many relationship (N:N). The relationship must be one-to-many (1:N) between any entity and a SharePoint document entity.
 
-In Common Data Service you can create an entity and enable the Document management property for the entity. This allows for the entity to participate in integration with SharePoint. Power Apps and Common Data Service support only a one-to-many relationship (1:N) between any entity and a SharePoint document related entity. A many-to-one or a many-to-many relationship between an entity and a SharePoint document entity results in the app not listing the documents that exist in the SharePoint document library.
+In Microsoft Dataverse you can create an entity and enable the Document management property for the entity. This allows for the entity to participate in integration with SharePoint. Power Apps and Dataverse support only a one-to-many relationship (1:N) between any entity and a SharePoint document related entity. A many-to-one or a many-to-many relationship between an entity and a SharePoint document entity results in the app not listing the documents that exist in the SharePoint document library.
 
 ## Document location for child entities
 Documents of a child entity only appear in the parent documents folder when the parent document location has been created. To create the location, navigate to the Documents tab of the parent record. If no such location is created, child documents will not appear in the parent entity folder. Once the location is created, child documents will begin to appear in the parent entity folder.

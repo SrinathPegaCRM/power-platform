@@ -6,7 +6,7 @@ manager: timrob
 ms.service: power-platform
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 02/04/2020
+ms.date: 09/08/2020
 ms.author: astockli
 search.audienceType: 
   - admin
@@ -41,7 +41,7 @@ The notifications sent from the Business Application Group communications team w
 | Microsoft Power BI  | mspowerbi@microsoft.com| 
 
 
-Email notifications are sent to Common Data Service users who have the System Administrator role in an impacted environment.  If you want to change who receives email communications, see [Manage email notifications](../admin/manage-email-notifications.md).
+Email notifications are sent to Microsoft Dataverse users who have the System Administrator role in an impacted environment.  If you want to change who receives email communications, see [Manage email notifications](../admin/manage-email-notifications.md).
 
 ## Incident Communications
 Major service incident emails can easily be identified by the red banner.
@@ -74,7 +74,7 @@ Power BI will display with the following yellow banner:
 Action requested notifications are sent when we detect that a configuration or a setting for your environment is causing the service to perform below expectations. The notification will include details on the situation as well as guidance on how to return performance to normal.
 
 ## Post-purchase customer lifecycle communications
-Once a customer has purchased model-driven apps in Dynamics 365, such as Dynamics 365 Sales and Customer Service, we send a series of email communications to administrators during the first year. These communications direct customers to a number of resources that will assist both administrators and users to successfully adopt and expand their use of model-driven apps in Dynamics 365.
+Once a customer has purchased customer engagement apps (Dynamics 365 Sales, Dynamics 365 Customer Service, Dynamics 365 Field Service, Dynamics 365 Marketing, and Dynamics 365 Project Service Automation), we send a series of email communications to administrators during the first year. These communications direct customers to a number of resources that will assist both administrators and users to successfully adopt and expand their use of customer engagement apps.
 
 You can easily identify these communications by the dark-blue banner.
 

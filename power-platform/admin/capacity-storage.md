@@ -1,7 +1,7 @@
 ---
-title: "New Common Data Service storage capacity  | MicrosoftDocs"
-description: Introducing a new storage model for Common Data Service.
-ms.date: 07/16/2020
+title: "New Microsoft Dataverse storage capacity  | MicrosoftDocs"
+description: Introducing a new storage model for Microsoft Dataverse.
+ms.date: 10/08/2020
 ms.reviewer: ""
 ms.service: "power-platform"
 ms.topic: "quickstart"
@@ -16,7 +16,9 @@ search.app:
   - Flow
 ---
 
-# New Common Data Service storage capacity 
+# New Microsoft Dataverse storage capacity 
+
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 If you purchased storage in or after April 2019, or you have a mix of storage purchases made before and after April 2019, you'll see your storage capacity entitlement and usage by database, file, and log as it appears in the Power Platform admin center today. 
 
@@ -27,19 +29,17 @@ We're rolling out this feature now so check back if your user experience varies 
 > [!NOTE]
 > For licensing information, see the [Power Apps and Power Automate licensing guide](https://go.microsoft.com/fwlink/p/?linkid=2085130).
 >
-> Common Data Service storage capacity isn't available for Microsoft Dynamics 365 US Government – Government Community Cloud (GCC), GCC High, Department of Defense, or Dynamics 365 online services operated by 21Vianet (operated and transacted by a local operator, Shanghai Blue Cloud Technology Co., Ltd, a wholly owned subsidiary of Beijing 21Vianet Broadband Data Center Co., Ltd., located in China).
->
 > If you purchased your Dynamics 365 subscription through a Microsoft partner, contact them to manage storage capacity. The steps below do not apply to partner-based subscriptions.
 
 ## Licenses for the new storage model
 
 The following licenses provide capacity by using the new storage model. If you have any of these licenses, you'll see the new model report: 
 
-- Common Data Service for Apps Database Capacity 
-- Common Data Service for Apps File Capacity 
-- Common Data Service for Apps Log Capacity 
+- Dataverse for Apps Database Capacity 
+- Dataverse for Apps File Capacity 
+- Dataverse for Apps Log Capacity 
 
-To see whether you have any of these licenses, sign in to the Microsoft 365 admin center, and then go to **Billing** > **Products & Services**.
+To see whether you have any of these licenses, sign in to the Microsoft 365 admin center, and then go to **Billing** > **Licenses**.
 
 > [!NOTE]
 > If you have a mix of [legacy model licenses](legacy-capacity-storage.md#licenses-for-the-legacy-storage-model) and the abovementioned new model licenses, you'll see the new model report.
@@ -69,6 +69,10 @@ To view the **Summary** page, select **Resources** > **Capacity** > **Summary**.
 
 > [!div class="mx-imgBorder"] 
 > ![Capacity page Summary tab](media/storage-data-capacity-page-review.png "Capacity page Summary tab")
+
+
+All entities of Dataverse, including system entities, are included in the storage capacity reports.
+
 
 |Number  |Description |
 |---------|---------|
@@ -124,12 +128,11 @@ We're making changes for what happens when an organization's storage capacity us
 
 For now, if you exceed your storage capacity, you'll receive notifications alerting you to the over-capacity usage. These notifications will occur as alerts in the Power Platform admin center. In the future, certain admin operations will no longer be available when a tenant exceeds storage capacity entitlements. Check back for updated information. 
 
-## Example storage capacity scenarios
+## Example storage capacity scenarios, overage enforcement
 
 You should be within limits for your entitled capacity for database, log, and file. If you have used more capacity than you're entitled to, you should buy more capacity or free up capacity. However, if you've overused database, log, or file capacity, review the following scenarios to understand when enforcement will be applied.
 
-
-### Scenario 1: Database storage is over capacity
+### Scenario 1: Database storage is over capacity, overage enforcement
 
 |Type  |Entitled  |Consumed  |
 |---------|---------|---------|
@@ -139,7 +142,7 @@ You should be within limits for your entitled capacity for database, log, and fi
 
 This tenant is 10 GB over in database usage. Despite having 200 GB excess file storage, the tenant is considered to be in deficit. This tenant should free up storage or purchase more capacity.
 
-### Scenario 2: Log storage is over capacity
+### Scenario 2: Log storage is over capacity, overage enforcement
 
 |Type  |Entitled  |Consumed  |
 |---------|---------|---------|
@@ -149,17 +152,7 @@ This tenant is 10 GB over in database usage. Despite having 200 GB excess file s
 
 This tenant is 10 GB over in log usage and has only 5 GB available in database capacity. Therefore, the tenant is in deficit and should free up storage or purchase more capacity.
 
-### Scenario 3: Log storage is over capacity
-
-|Type  |Entitled  |Consumed  |
-|---------|---------|---------|
-|**Database**     | 100 GB        | 80 GB        |
-|**Log**     |  10 GB       | 20 GB        |
-|**File**     | 400 GB        | 200 GB        |
-
-This tenant is 10 GB over in log usage but has 20 GB available in database capacity. Therefore, the tenant isn't in deficit. Note that file storage excess entitlement can't be used to compensate deficits in log or database storage.
-
-### Scenario 4: File storage is over capacity
+### Scenario 3: File storage is over capacity, overage enforcement
 
 |Type  |Entitled  |Consumed  |
 |---------|---------|---------|
@@ -169,6 +162,18 @@ This tenant is 10 GB over in log usage but has 20 GB available in database capac
 
 This tenant is 90 GB over in file usage. Despite having 85 GB available (80 GB database + 5 GB log) in storage capacity, the tenant is considered to be in deficit. This tenant should free up storage or purchase more capacity.
 
+## Example storage capacity scenario, no overage
+
+### Scenario 4: Log storage is over capacity
+
+|Type  |Entitled  |Consumed  |
+|---------|---------|---------|
+|**Database**     | 100 GB        | 80 GB        |
+|**Log**     |  10 GB       | 20 GB        |
+|**File**     | 400 GB        | 200 GB        |
+
+This tenant is 10 GB over in log usage but has 20 GB available in database capacity. Therefore, the tenant isn't in deficit. Note that file storage excess entitlement can't be used to compensate deficits in log or database storage.
+
 ## Actions to take for a storage capacity deficit
 
 You can always [free up storage](free-storage-space.md), [delete unwanted environments](delete-environment.md), or buy more capacity to be compliant with storage usage. To learn more about capacity add-ons, see the [Dynamics 365 Licensing Guide](https://go.microsoft.com/fwlink/p/?LinkId=866544) or the ["Add-ons" section of the Power Apps and Power Automate Licensing Guide](https://go.microsoft.com/fwlink/?linkid=2085130). You can work through your organization's standard procurement process to purchase capacity add-ons.
@@ -177,7 +182,7 @@ You can always [free up storage](free-storage-space.md), [delete unwanted enviro
 
 ### Why is my storage consumption decreasing in database and growing in file?
 
-We are constantly optimizing the Common Data Service for ease of use, performance, and efficiency. Part of this ongoing effort is to move data to the best possible storage with the lowest cost for customers. File-type data such as “Annotation” and “Attachment” is moving from database to file storage. This leads to decreased usage of database capacity and an increase in file capacity.
+We are constantly optimizing the Dataverse for ease of use, performance, and efficiency. Part of this ongoing effort is to move data to the best possible storage with the lowest cost for customers. File-type data such as “Annotation” and “Attachment” is moving from database to file storage. This leads to decreased usage of database capacity and an increase in file capacity.
 
 ### Why could my database table size decrease while my table and file data sizes remain the same?
 
@@ -185,7 +190,7 @@ As part of moving file-type data such as “Annotation” and “Attachment” o
 
 ### Do indexes affect database storage usage?
 
-Possibly. Database storage includes both the database records and index files used to improve search performance. Indexes are created and optimized for peak performance and are updated frequently by the system by analyzing data use patterns. No user action is needed to optimize the indexes, as all Common Data Service stores have tuning enabled by default. A fluctuation in database storage can be represented by an increased or decreased number of indexes on the database. Common Data Service is continually being tuned to increase efficiency and incorporate new technologies that improve user experience and optimize storage capacity.  Common causes for an increase in index size are:
+Possibly. Database storage includes both the database records and index files used to improve search performance. Indexes are created and optimized for peak performance and are updated frequently by the system by analyzing data use patterns. No user action is needed to optimize the indexes, as all Dataverse stores have tuning enabled by default. A fluctuation in database storage can be represented by an increased or decreased number of indexes on the database. Dataverse is continually being tuned to increase efficiency and incorporate new technologies that improve user experience and optimize storage capacity.  Common causes for an increase in index size are:
 
 - An organization making use of new functionality (this can be custom, out-of-the-box, or part of an update or solution installation).
 - Data volume or complexity changes.
@@ -244,7 +249,7 @@ Default, production, and sandbox environments are counted for consumption. Trial
 
 ### What are entities ending in “- analytics" in my capacity report?
 
-Entities ending in “– Analytics” are entities used by one or more Insights applications, for example Sales Insights, Customer Service Hub, or Field Service and resource scheduling and optimization analytics dashboard to generate predictive insights and/or analytics dashboards. The data is synched from Common Data Service entities. See **More information** below for documentation covering the installed Insights applications and the entities used to create insights and dashboards.
+Entities ending in “– Analytics” are entities used by one or more Insights applications, for example Sales Insights, Customer Service Hub, or Field Service and resource scheduling and optimization analytics dashboard to generate predictive insights and/or analytics dashboards. The data is synched from Dataverse entities. See **More information** below for documentation covering the installed Insights applications and the entities used to create insights and dashboards.
 
 **More information:**
 - [Sales Insights ](https://docs.microsoft.com/dynamics365/ai/sales/help-hub#get-started)

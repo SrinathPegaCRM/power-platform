@@ -26,7 +26,7 @@ search.app:
 
 # Manage support environments
 
-A support environment is any non-production environment of Common Data Service used by Microsoft support to reproduce and resolve customer issues. When there is an issue affecting the operation of your online service, Microsoft can create a support environment in your tenant to troubleshoot and repair the issue.  It is isolated from your production environment so it does not impact your business operations. System admins have full control of managing and providing organization data by [copying it](copy-environment.md) to a support environment. 
+A support environment is any non-production environment of Microsoft Dataverse used by Microsoft support to reproduce and resolve customer issues. When there is an issue affecting the operation of your online service, Microsoft can create a support environment in your tenant to troubleshoot and repair the issue.  It is isolated from your production environment so it does not impact your business operations. System admins have full control of managing and providing organization data by [copying it](copy-environment.md) to a support environment. 
 
 ### What is a support environment?
 
@@ -79,4 +79,4 @@ Yes.
 To assist with diagnosing and resolving a support issue, you must consent to the creation of a [Minimal](copy-environment.md#copy-over-everything) or a [Full](copy-environment.md#copy-over-customizations-and-schemas-only) copy of the environment with the issue. The consent form shown below records your instructions to Microsoft for the creation of a support environment. 
 
 > [!div class="mx-imgBorder"] 
-> ![](./media/consent-support-environment.png "Consent for support environment")
+> ![Consent for support environment](./media/consent-support-environment.png "Consent for support environment")

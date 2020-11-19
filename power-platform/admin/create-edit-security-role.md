@@ -7,7 +7,7 @@ ms.reviewer: jimholtz
 ms.service: power-platform
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 03/09/2020
+ms.date: 09/04/2020
 search.audienceType: 
   - admin
 search.app:
@@ -17,6 +17,8 @@ search.app:
   - Flow
 ---
 # Create or edit a security role to manage access
+
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 You can create new security roles to accommodate changes in your business requirements or you can edit the privileges associated with an existing security role.
   
@@ -113,7 +115,7 @@ You can create new security roles to accommodate changes in your business requir
  
  We've created a solution you can import that provides a security role with the required minimum privileges.
 
-Start by downloading the solution from the Download Center: [Common Data Service minimum privilege security role](https://download.microsoft.com/download/6/5/5/6552A30E-05F4-45F0-AEE3-9BB01E13118A/MinprivilegeSecRole_1_0_0_0.zip).
+Start by downloading the solution from the Download Center: [Microsoft Dataverse minimum privilege security role](https://download.microsoft.com/download/6/5/5/6552A30E-05F4-45F0-AEE3-9BB01E13118A/MinprivilegeSecRole_1_0_0_0.zip).
 
 Then, follow the directions to import the solution: [Import, update, and export solutions](https://docs.microsoft.com/powerapps/maker/common-data-service/import-update-export-solutions).
 
@@ -122,7 +124,7 @@ When you import the solution, it creates the **min prv apps use** role which you
 > [!IMPORTANT]
 > You should try out the solution in a development environment before importing into a production environment. 
   
-- When logging in to model-driven apps in Dynamics 365:  
+- When logging in to customer engagement apps:  
   
   -   Assign the min prv apps use security role or a copy of this security role to your user.
   
@@ -131,7 +133,7 @@ When you import the solution, it creates the **min prv apps use** role which you
 
 - When logging in to [!INCLUDE[pn_crm_for_outlook_short](../includes/pn-crm-for-outlook-short.md)]:
 
-   - To render navigation for model-driven apps in Dynamics 365 and all buttons: assign the min prv apps use security role or a copy of this security role to your user   
+   - To render navigation for customer engagement apps and all buttons: assign the min prv apps use security role or a copy of this security role to your user   
   
   - To render an entity grid: assign Read privilege on the entity  
   

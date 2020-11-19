@@ -2,11 +2,10 @@
 title: "Troubleshoot SharePoint integration   | MicrosoftDocs"
 description: Troubleshoot SharePoint integration
 author: Mattp123
-manager: kvivek
 ms.service: power-platform
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 04/15/2020
+ms.date: 09/11/2020
 ms.author: matp
 search.audienceType: 
   - admin
@@ -19,6 +18,8 @@ search.app:
 # Troubleshoot SharePoint integration
 
 <!-- legacy procedure -->
+
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 This topic explains how to fix common issues that may occur with SharePoint document management.
 
@@ -75,7 +76,7 @@ If FetchXML or LayoutXML are malformed, use the following to restore.
 11. Search LayoutXml of Document associated grid (search for *Document Associated*).
     
     > [!div class="mx-imgBorder"] 
-    > ![](media/sharepoint-document-associated-grid.png "Search for Document Associated")  -->
+    > ![Search for Document Associated](media/sharepoint-document-associated-grid.png "Search for Document Associated")  -->
 
 10.    Extract the exported solution zip file (downloaded file from Step 8).  
 11.    In the solution contents folder, locate and then open **Solution.xml**.
@@ -83,12 +84,12 @@ If FetchXML or LayoutXML are malformed, use the following to restore.
     From `<Managed>0</Managed>` to `<Managed>1</Managed>`.
 13.    In the solution contents folder, locate and open **customization.xml**.
 14.    Search the `<SavedQuery>` element where the **savedqueryid** attribute is equal to "0016f9f3-41cc-4276-9d11-04308d15858d".
-15.    If the `<SavedQuery>` element found in step 14 is similar to 
+15.    If you can't find a saved query with the ID specified in the previous step, go to step 19. However, if the `<SavedQuery>` element found in step 14 is similar to 
 `<SavedQuery unmodified="1">`, remove the **unmodified="n"** attribute. 
 16. Search layoutxml of Document associated grid (search for *Document Associated*).
     
     > [!div class="mx-imgBorder"] 
-    > ![](media/sharepoint-document-associated-grid.png "Search for Document Associated")
+    > ![Search for Document Associated](media/sharepoint-document-associated-grid.png "Search for Document Associated")
 
 17. Make the changes as indicated below for the layoutxml section:
 
@@ -153,12 +154,12 @@ If FetchXML or LayoutXML are malformed, use the following to restore.
 
 19. Similarly search the `<SavedQuery>` element where the **savedqueryid** attribute is equal to "a5b008ac-07d9-4554-8509-2c05767bff51".
 
-20. If the `<SavedQuery>` element found in step 19 is similar to `<SavedQuery unmodified="1">`, remove the **unmodified="n"** attribute.
+20. If you can't find a saved query with the ID specified in the previous step, go to step 24. However, if the `<SavedQuery>` element found in step 19 is similar to `<SavedQuery unmodified="1">`, remove the **unmodified="n"** attribute.
 
 21. Search layoutxml of All SharePoint Document (search for *All SharePoint Document*).
 
     > [!div class="mx-imgBorder"] 
-    > ![](media/search-layoutxml-sharepoint.png "Search layoutxml for All SharePoint Document")
+    > ![Search layoutxml for All SharePoint Document](media/search-layoutxml-sharepoint.png "Search layoutxml for All SharePoint Document")
 
 22. Make the changes as indicated below for the layoutxml section:
 
@@ -218,12 +219,12 @@ If FetchXML or LayoutXML are malformed, use the following to restore.
 
 24. Similarly search the `<SavedQuery>` element where the **savedqueryid** attribute is equal to "cb177797-b2ac-42a8-9773-5412321a965c".
 
-25. If the `<SavedQuery>` element found in step 24 is similar to `<SavedQuery unmodified="1">`, remove the **unmodified="n"** attribute.
+25. If you can't find a saved query with the ID specified in the previous step, go to step 29. However, if the `<SavedQuery>` element found in step 24 is similar to `<SavedQuery unmodified="1">`, remove the **unmodified="n"** attribute.
 
 26. Search layoutxml of OneNote SharePoint Document (search for *OneNote SharePoint Document*).
 
     > [!div class="mx-imgBorder"] 
-    > ![](media/search-layoutxml-onenote.png "Search layoutxml for OneNote SharePoint Document")
+    > ![Search layoutxml for OneNote SharePoint Document](media/search-layoutxml-onenote.png "Search layoutxml for OneNote SharePoint Document")
 
 27. Make the changes as indicated below for the layoutxml section:
 
@@ -293,9 +294,9 @@ If FetchXML or LayoutXML are malformed, use the following to restore.
 
 ## Validate and fix SharePoint site URLs
 
-In model-driven apps in Dynamics 365, [!INCLUDE[pn_SharePoint_short](../includes/pn-sharepoint-short.md)] site and document location records contain links to site collections, site, document libraries, and folders in [!INCLUDE[pn_SharePoint_short](../includes/pn-sharepoint-short.md)]. These site and document location records are associated with records so that the documents for records can be stored in [!INCLUDE[pn_SharePoint_short](../includes/pn-sharepoint-short.md)].  
+In customer engagement apps (such as Dynamics 365 Sales and Customer Service), [!INCLUDE[pn_SharePoint_short](../includes/pn-sharepoint-short.md)] site and document location records contain links to site collections, site, document libraries, and folders in [!INCLUDE[pn_SharePoint_short](../includes/pn-sharepoint-short.md)]. These site and document location records are associated with records so that the documents for records can be stored in [!INCLUDE[pn_SharePoint_short](../includes/pn-sharepoint-short.md)].  
   
- When the links between model-driven apps in Dynamics 365 and [!INCLUDE[pn_SharePoint_short](../includes/pn-sharepoint-short.md)] break, you must validate and fix the links so that the records continue to point to the correct document libraries and folders for managing the documents.  
+ When the links between customer engagement apps and [!INCLUDE[pn_SharePoint_short](../includes/pn-sharepoint-short.md)] break, you must validate and fix the links so that the records continue to point to the correct document libraries and folders for managing the documents.  
   
 1. [!INCLUDE[proc_permissions_system_admin](../includes/proc-permissions-system-admin.md)]  
   
@@ -313,7 +314,7 @@ In model-driven apps in Dynamics 365, [!INCLUDE[pn_SharePoint_short](../includes
   
    3. Select the site URLs that you want to validate, and then click or tap **Validate**.  
   
-3. Model-driven apps in Dynamics 365 validate all the selected site URLs and their immediate subordinate site and document library URLs. It then displays the results in **Validating Sites**.  
+3. Customer engagement apps validate all the selected site URLs and their immediate subordinate site and document library URLs. It then displays the results in **Validating Sites**.  
   
 4. To fix a URL, open the site record, and enter the correct URL. [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Create or edit site records](edit-existing-sharepoint-site-records.md).  
   
@@ -327,7 +328,7 @@ This error message can occur when the SharePoint site that is configured with do
 2. Open the **SharePoint Site** record that has been renamed and enter the **Absolute URL** with new URL.
 
     > [!div class="mx-imgBorder"] 
-    > ![](media/fix-renamed-sp-site.png "Enter SharePoint relative URL")
+    > ![Enter SharePoint relative URL](media/fix-renamed-sp-site.png "Enter SharePoint relative URL")
 
 3. Select **Save & Close**.
 

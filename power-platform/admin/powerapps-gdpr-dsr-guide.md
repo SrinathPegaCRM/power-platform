@@ -3,11 +3,10 @@ title: Responding to Data Subject Rights (DSR) requests for Power Apps customer 
 description: Walkthough of how to respond to Data Subject Rights (DSR) requests for Power Apps customer data
 author: jimholtz
 ms.reviewer: paulliew
-manager: kvivek
 ms.service: power-platform
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 02/18/2020
+ms.date: 08/20/2020
 ms.author: jimholtz
 search.audienceType: 
   - admin
@@ -20,6 +19,8 @@ search.app:
 
 # Responding to Data Subject Rights (DSR) requests for Power Apps customer data
 
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 ## Introduction to DSR Requests
 The European Union (EU) General Data Protection Regulation (GDPR) gives rights to people (known in the regulation as *data subjects*) to manage the personal data that's been collected by an employer or other type of agency or organization (known as the *data controller* or just *controller*). Personal data is defined very broadly under the GDPR as any data that relates to an identified or identifiable natural person. The GDPR gives data subjects the right to do the following, as it pertains to their personal data:
 
@@ -31,7 +32,7 @@ The European Union (EU) General Data Protection Regulation (GDPR) gives rights t
 
 A formal request by a data subject to a controller to take an action on his or her personal data is called a Data Subject Rights (DSR) request.
 
-This article describes how Microsoft is preparing for the GDPR, and also provides examples of steps you can take to support GDPR compliance when using Power Apps, Power Automate, and Common Data Service. You'll learn how to use Microsoft products, services, and administrative tools to help controller customers find, access, and act on personal data in the Microsoft cloud in response to DSR requests.
+This article describes how Microsoft is preparing for the GDPR, and also provides examples of steps you can take to support GDPR compliance when using Power Apps, Power Automate, and Microsoft Dataverse. You'll learn how to use Microsoft products, services, and administrative tools to help controller customers find, access, and act on personal data in the Microsoft cloud in response to DSR requests.
 
 The following actions are covered in this article:
 
@@ -64,14 +65,14 @@ Connection permissions    | Certain types of connections can be shared with user
 Custom connector    | Custom connectors that a user has created to provide access to a data source not offered through one of the Power Apps standard connectors. [Learn more](https://go.microsoft.com/fwlink/?linkid=872245)
 Custom-connector permissions    | Custom connectors can be shared with users within an organization. [Learn more](https://go.microsoft.com/fwlink/?linkid=872246)
 Power Apps user and user-app settings    | Power Apps stores several user preferences and settings that are used to deliver the Power Apps runtime and portal experiences.
-Power Apps notifications    | Power Apps sends several types of notifications to users including when an app is shared with them and when a Common Data Service export operation has completed.
+Power Apps notifications    | Power Apps sends several types of notifications to users including when an app is shared with them and when a Dataverse export operation has completed.
 Gateway    | Gateways are on-premises data gateways that can be installed by a user to transfer data quickly and securely between Power Apps and a data source that isn't in the cloud. [Learn more](https://go.microsoft.com/fwlink/?linkid=872247)
 Gateway permissions    | Gateways can be shared with users within an organization. [Learn more](https://go.microsoft.com/fwlink/?linkid=872249)
-Model-driven apps and model-driven app permissions    | Model-driven app design is a component-focused approach to app development. Model-driven apps and their user access permissions are stored as data within the Common Data Service database.  [Learn more](https://go.microsoft.com/fwlink/?linkid=872248)
+Model-driven apps and model-driven app permissions    | Model-driven app design is a component-focused approach to app development. Model-driven apps and their user access permissions are stored as data within the Dataverse database.  [Learn more](https://go.microsoft.com/fwlink/?linkid=872248)
 
 Power Apps offers the following experiences to find personal data for a specific user:
 
-- **Website access**: [Power Apps site](https://make.powerapps.com), [Power Apps Admin center](https://admin.powerapps.com/), and [Microsoft 365 Service Trust Portal](https://servicetrust.microsoft.com/)
+- **Website access**: [Power Apps site](https://make.powerapps.com) and [Microsoft 365 Service Trust Portal](https://servicetrust.microsoft.com/)
 - **PowerShell access**: Power Apps cmdlets (for [app creators](https://go.microsoft.com/fwlink/?linkid=871448) and [administrators](https://go.microsoft.com/fwlink/?linkid=871804)) and [On-premises gateway cmdlets](https://go.microsoft.com/fwlink/?linkid=872238)
 
 For detailed steps on how you can use these experiences to find personal data for a specific user for each of these types of resources, see [Responding to Data Subject Rights (DSR) requests to export Power Apps customer data](powerapps-gdpr-export-dsr.md).
@@ -86,10 +87,10 @@ For guidance on how to discover personal data stored by the Power Automate servi
 > [!IMPORTANT]
 > It is recommended that admins complete this step for a Power Apps user
 
-### Step 3: Find personal data for the user in environments of Common Data Service
-Certain Power Apps licenses, including the Power Apps Community Plan, give the ability for users within your organization to create environments of Common Data Service and to create and build apps on Common Data Service. The Power Apps Community Plan is a free license that allows users to try out Common Data Service in an individual environment. See the [Power Apps Pricing](https://powerapps.microsoft.com/pricing/) page for which capabilities are included in each Power Apps license.
+### Step 3: Find personal data for the user in environments of Dataverse
+Certain Power Apps licenses, including the Power Apps Community Plan, give the ability for users within your organization to create environments of Dataverse and to create and build apps on Dataverse. The Power Apps Community Plan is a free license that allows users to try out Dataverse in an individual environment. See the [Power Apps Pricing](https://powerapps.microsoft.com/pricing/) page for which capabilities are included in each Power Apps license.
 
-For guidance on how to discover personal data stored by Common Data Service, see [Responding to Data Subject Rights (DSR) requests for customer data in Common Data Service](common-data-service-gdpr-dsr-guide.md).
+For guidance on how to discover personal data stored by Dataverse, see [Responding to Data Subject Rights (DSR) requests for customer data in Dataverse](common-data-service-gdpr-dsr-guide.md).
 
 > [!IMPORTANT]
 > It is recommended that admins complete this step for a Power Apps user.
@@ -100,7 +101,7 @@ If a data subject asks you to rectify the personal data that resides in your org
 You can use Azure Active Directory to manage the identities (personal data) of your users within Power Apps. Enterprise customers can manage DSR rectify requests by using the limited editing features within a given Microsoft service. As a data processor, Microsoft does not offer the ability to correct system-generated logs, because they reflect factual activities and constitute a historical record of events within Microsoft services. See [GDPR: Data Subject Requests (DSRs)](https://servicetrust.microsoft.com/ViewPage/GDPRDSR) for details.
 
 ## Restrict
-Data subjects may request that you restrict processing of their personal data.  We provide both pre-existing application programming interfaces (APIs) and user interfaces (UIs).  These experiences provide the enterprise customer's Power Platform service admin the capability to manage such DSRs through a combination of data export and data deletion. A customer may request:
+Data subjects may request that you restrict processing of their personal data.  We provide both pre-existing application programming interfaces (APIs) and user interfaces (UIs).  These experiences provide the enterprise customer's Power Platform admin the capability to manage such DSRs through a combination of data export and data deletion. A customer may request:
 
 * Export an electronic copy of the personal data of the user, including:
 

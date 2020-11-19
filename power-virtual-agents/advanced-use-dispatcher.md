@@ -1,15 +1,15 @@
 ---
-title: "Use a Microsoft Bot Framework bot with Power Virtual Agents"
+title: "Use a Microsoft Bot Framework bot"
 description: "Use and extend an existing Microsoft Bot Framework bot to work with Power Virtual Agents."
-keywords: "extensibility, integration, extend bot, bot framework"
-ms.date: 4/15/2020
-ms.service:
-  - "dynamics-365-ai"
+keywords: "extensibility, integration, extend bot, bot framework, PVA"
+ms.date: 9/22/2020
+ms.service: power-virtual-agents
 ms.topic: article
 author: pawant-ms
 ms.author: iawilt
 ms.reviewer: iaanw 
 manager: shellyha
+ms.custom: advanced-authoring, ceX
 ---
 
 # Use a Microsoft Bot Framework bot with Power Virtual Agents
@@ -24,8 +24,8 @@ This article covers how to use the Microsoft Bot Framework dispatcher tool to in
 ## Prerequisites
 
   * Bot built using [Microsoft Bot Framework SDK v4](https://github.com/microsoft/botframework)
-  * Understanding of [Microsoft Bot Framework's dispatch tool](https://docs.microsoft.com/azure/bot-service/bot-builder-tutorial-dispatch?view=azure-bot-service-4.0&tabs=csaddref%2Ccsbotconfig)
-  * Understanding how to [test and debug bots using Bot Framework emulator](https://docs.microsoft.com/azure/bot-service/bot-service-debug-bot?view=azure-bot-service-4.0)
+  * Understanding of [Microsoft Bot Framework's dispatch tool](https://docs.microsoft.com/azure/bot-service/bot-builder-tutorial-dispatch?view=azure-bot-service-4.0&tabs=csaddref%2Ccsbotconfig&preserve-view=true)
+  * Understanding how to [test and debug bots using Bot Framework emulator](https://docs.microsoft.com/azure/bot-service/bot-service-debug-bot?view=azure-bot-service-4.0&preserve-view=true)
   * [!INCLUDE [Medical and emergency usage](includes/pva-usage-limitations.md)]
 
 
@@ -42,7 +42,7 @@ Code snippets used in this document are available in these articles:
 
 ## Retrieve topics and utterances from your Power Virtual Agents environment
 
-You'll need to retrieve your Power Virtual Agents bot's content (topics and utterances), your tenant’s endpoint, and the direct line secret.
+You'll need to retrieve your Power Virtual Agents bot's content (topics and utterances), your tenant's endpoint, and the direct line secret.
 
 ### Retrieve bot ID and tenant ID from your bot
 
@@ -66,7 +66,7 @@ You'll need to retrieve your Power Virtual Agents bot's content (topics and utte
 
 ### Retrieve topics and utterances from your bot
 
-  1.	Export `BotContent` and `Annotations` from Common Data Service. [Review how to export data](https://docs.microsoft.com/power-virtual-agents/gdpr-export).
+  1.	Export `BotContent` and `Annotations` from Microsoft Dataverse. [Review how to export data](https://docs.microsoft.com/power-virtual-agents/gdpr-export).
   
   2.  Download the zip file and unzip it to find two CSV files: `annotations.csv` and `msdynce_botcontents.csv`
   
@@ -91,7 +91,7 @@ You'll need to retrieve your Power Virtual Agents bot's content (topics and utte
 
 ## Train the dispatcher custom model with your Power Virtual Agents topics
 
-Train and recreate the dispatcher app and add your exported topics and utterances with your existing Cognitive Service intents (for example, LUIS and/or QnA maker) using the dispatch tool. For more information, [follow the guidance in the dispatch tool tutorial](https://docs.microsoft.com/azure/bot-service/bot-builder-tutorial-dispatch?view=azure-bot-service-4.0&tabs=cs).
+Train and recreate the dispatcher app and add your exported topics and utterances with your existing Cognitive Service intents (for example, LUIS and/or QnA maker) using the dispatch tool. For more information, [follow the guidance in the dispatch tool tutorial](https://docs.microsoft.com/azure/bot-service/bot-builder-tutorial-dispatch?view=azure-bot-service-4.0&tabs=cs&preserve-view=true).
 
 1.  Install the dispatch tool using the NuGet package manager.
 
@@ -255,7 +255,7 @@ The following steps require you to add code that registers your new dispatch end
     }
     ```
  
-4. Update the BotServices constructor to instatiate `DynamicsBotService` in the `BotServices.cs` file.
+4. Update the BotServices constructor to start `DynamicsBotService` in the `BotServices.cs` file.
 
     ```csharp
     DynamicsBotService = new DynamicsBotService(new DynamicsBotEndpoint(

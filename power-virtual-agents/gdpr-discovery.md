@@ -1,13 +1,15 @@
 ---
 title: "Responding to GDPR Data Subject Discovery Requests"
 description: "Learn how to respond​ to GDPR Data Subject Requests for Power Virtual Agents."
-ms.date: 05/29/2019
-ms.service:
-  - "dynamics-365-ai"
+keywords: "PVA"
+ms.date: 9/22/2020
+ms.service: power-virtual-agents
 ms.topic: article
-author: m-hartmann
-ms.author: mhart
+author: iaanw
+ms.author: iawilt
 manager: shellyha
+ms.custom: "ceX"
+ms.collection: virtual-agent
 ---
 
 # Responding to GDPR discovery requests from data subjects

@@ -1,11 +1,10 @@
 ---
 title: "About Unified Interface  | MicrosoftDocs"
 description: About Unified Interface
-manager: kvivek
 ms.service: power-platform
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 12/11/2019
+ms.date: 07/27/2020
 author: jimholtz
 ms.author: jimholtz
 search.audienceType: 
@@ -17,6 +16,8 @@ search.app:
   - Flow
 ---
 # About Unified Interface for model-driven apps in Power Apps 
+
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 Unified Interface uses responsive web design principles to provide an optimal viewing and interaction experience for any screen size, device, or orientation. It brings all the rich experiences to any client that you are using. Whether you are using a browser, tablet, or phone, you will be able to consume similar experiences.
 
@@ -89,6 +90,32 @@ The following are entities that are currently read-only in Unified Interface:
 - Contract Lines
 - Contract Templates
 - Case Resolution
+
+### Workaround for out-of-the-box or custom entities appearing as read-only
+
+Follow these steps to make all the out-of-the-box actions available and entities editable.
+
+1. On the navigation bar in your app, select the **Settings** icon and then select **Advanced Settings**.
+
+   :::image type="content" source="media/advanced-settings-option.png" alt-text="Advanced Settings option on the Settings menu":::
+
+   The **Business Management** page opens in a new browser tab.
+
+2. On the navigation bar, select Settings and then select Customizations.
+
+   :::image type="content" source="media/customization-in-sitemap.png" alt-text="Select Customizations":::
+
+3. On the **Customization** page, select **Customize the System**.
+
+4. In the solution explorer, under **Components**, expand **Entities** and then select the specific entity that's appearing as read-only.
+
+5. On the **General** tab, under **Outlook & Mobile**, clear the **Read-only in Unified Client** check box.
+
+   :::image type="content" source="media/read-only-in-unified-client-setting.png" alt-text="Setting to make an entity read-only in the Unified Client":::
+
+6. Save and publish the customizations.
+
+7. In the Unified Interface app, refresh the window.
 
 ### See also
 [Overview of building model-driven apps](https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview)

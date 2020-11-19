@@ -1,9 +1,9 @@
 ---
-title: "Configure Power Virtual Agents hand-off to Omnichannel for Customer Service"
+title: "Configure hand-off to Omnichannel for Customer Service"
 description: "Have human agents intercede in bot conversations by connecting Power Virtual Agents to Omnichannel."
-ms.date: 6/11/2020
-ms.service:
-  - "dynamics-365-ai"
+keywords: "PVA"
+ms.date: 9/22/2020
+ms.service: power-virtual-agents
 ms.topic: article
 author: iaanw  
 ms.author: iawilt
@@ -25,7 +25,7 @@ For more information about hand off, and how to use hand-off within a bot conver
 
 ## Prerequisites
 * Product license: You need a [product license for Power Virtual Agents](https://go.microsoft.com/fwlink/?LinkId=2092080&clcid=0x409) and a [product license for Omnichannel for Customer service](/dynamics365/customer-engagement/omnichannel/try-chat-for-dynamics365).
-* Role: You must be assigned a role that can create add bots into Omnichannel ([see roles required](/dynamics365/omnichannel/administrator/add-users-assign-roles))
+* Role: You must be assigned the Omnichannel administrator role to add bots in Omnichannel for Customer Service. More information: [Understand roles and their privileges](/dynamics365/omnichannel/administrator/add-users-assign-roles#understand-roles-and-their-privileges).
 * Azure Application ID: You will need an [application registered in Azure](/azure/active-directory/develop/howto-create-service-principal-portal#create-an-azure-active-directory-application) prior to connecting to Omnichannel for Customer Service.
 * [!INCLUDE [Medical and emergency usage](includes/pva-usage-limitations.md)]
 
@@ -53,7 +53,7 @@ Sign in to the Power Virtual Agents bot you want to connect to Omnichannel for C
 1. Follow the steps to create or reuse an existing Azure application ID. Copy the *Application (client) ID* and paste it in the text box provided.
 
     >[!IMPORTANT]
-    >Omnichannel models bots as "application users" in the system. Therefore, the *Application (client) ID* that you use must be unique to your organization (your Common Data Service organization or environment).
+    >Omnichannel models bots as "application users" in the system. Therefore, the *Application (client) ID* that you use must be unique to your organization (your Microsoft Dataverse organization or environment).
 
 1. Power Virtual Agents uses a [Teams channel](getting-started-deploy.md) to communicate with Omnichannel for Customer Service. If a Teams channel is not enabled, a Teams channel will be enabled when you select **Next**. 
 
@@ -76,5 +76,6 @@ Once your bot has been connected to Omnichannel for Customer Service, you cannot
 Some content may not show, such as emojis and certain types of notes or variables. If you encounter problems with the display of content, see the [Omnichannel for Customer Service documentation library](/dynamics365/omnichannel/omnichannel-readme).
 
 
+## Known limitations
+See [Known limitations when using Power Virtual Agents with Omnichannel for Customer Service](/dynamics365/omnichannel/administrator/configure-bot-virtual-agent#known-limitations) for more information.
 
-[!INCLUDE [handoff-known-limitations](includes/handoff-known-limitations.md)]

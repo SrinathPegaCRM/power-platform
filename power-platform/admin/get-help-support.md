@@ -2,11 +2,10 @@
 title: "Get Help + Support   | MicrosoftDocs"
 description: Use the Help + support experience to contact a Microsoft support representative to get resolution for your issue.
 author: jimholtz
-manager: kvivek
 ms.service: power-platform
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 04/14/2020
+ms.date: 09/21/2020
 ms.author: jimholtz 
 search.audienceType: 
   - admin
@@ -23,19 +22,37 @@ Admins can use the **Help + support** experience in the [Power Platform admin ce
 An example of solutions provided for Dynamics 365 App for Outlook issues:
 
 > [!div class="mx-imgBorder"] 
-> ![](media/support-solutions-list.png "List of possible solutions")
+> ![List of possible solutions](media/support-solutions-list.png "List of possible solutions")
 
 ### Prerequisites
 
--  You have a security role that is enabled for creating support requests such as an Global admin or Service support admin.
+- You have a security role that is enabled for creating support requests. Users having one of these security roles can create support requests:
 
--  For the following [support plans](https://www.microsoft.com/dynamics365/support):
+  - AAD Role Admin
+  - Power Apps Full Admin
+  - Power Apps Environment Admin (Environment Admin, System Admin)
+  - Company Admin
+  - Billing Admin
+  - Service Admin
+  - CRM Service Admin
+  - Power Platform Admin    `
+  - Security Admin
+  - CRM Organization Admin
+  - Partner Delegated Admin
+  - SharePoint Admin
+  - Teams Admin
+  - Exchange Admin
+  - Power BI Admin
+  - Compliance Admin
+  - Helpdesk Admin
+
+- For the following [support plans](https://www.microsoft.com/dynamics365/support):
    
-   - Subscription Support
-   - Enhanced Support
-   - Professional Direct Support
-   - Premier Support
-   - Unified Support
+  - Subscription Support
+  - Enhanced Support
+  - Professional Direct Support
+  - Premier Support
+  - Unified Support
 
 > [!NOTE]
 > In the following cases, you might not be able to create a support request or we can't provide relevant solutions:
@@ -58,7 +75,7 @@ An example of solutions provided for Dynamics 365 App for Outlook issues:
 3. Select the product with the issue. Fill in the problem type, a description of the issue, and then select **See solutions**.
 
    > [!div class="mx-imgBorder"] 
-   > ![](media/create-support-ticket.png "See solutions")
+   > ![See solutions](media/create-support-ticket.png "See solutions")
 
    Based on the information you provided, you'll see a list of possible solutions to your issue. Select the relevant solution and see if the content can successfully guide you to a fix. 
 
@@ -68,12 +85,12 @@ An example of solutions provided for Dynamics 365 App for Outlook issues:
    > If you have one of the plans listed in [Prerequisites](#prerequisites), you can set the severity to a higher level than **Minimal**.
 
    > [!div class="mx-imgBorder"] 
-   > ![](media/support-request-page2.png "Create a new support request")
+   > ![Create a new support request](media/support-request-page2.png "Create a new support request")
 
 5. If you have a **Premier** support plan, select **Yes** for **File as a Premier support request?** and fill in the fields. If you don't know your access or contract ID, please contact your service admin or Technical Account Manager (TAM).
 
    > [!div class="mx-imgBorder"] 
-   > ![](media/premier-support.png "Premier support info")
+   > ![Premier support info](media/premier-support.png "Premier support info")
 
 > [!NOTE]
 > - For **Contract ID/Password**, please enter your Premier contract ID. 

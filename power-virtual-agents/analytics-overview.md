@@ -1,18 +1,24 @@
 ---
-title: "Fundamentals - Analyze Power Virtual Agents bot usage"
+title: "Fundamentals - Analyze chatbot usage"
 description: "Analyze customer satisfaction, topic usage, and bot performance in Power Virtual Agents."
-ms.date: 2/27/2020
-ms.service:
-  - "dynamics-365-ai"
+keywords: "PVA"
+ms.date: 9/22/2020
+ms.service: power-virtual-agents
 ms.topic: article
 author: iaanw
 ms.author: iawilt
 manager: shellyha
-ms.cusom: analysis
+ms.cusom: analysis, ceX
 ms.collection: virtual-agent
 ---
 
 # Analysis in Power Virtual Agents
+
+Select the version of Power Virtual Agents you're using here:
+
+> [!div class="op_single_selector"]
+> - [Power Virtual Agents web app](analytics-overview.md)
+> - [Power Virtual Agents app in Microsoft Teams](teams/analytics-overview-teams.md)
 
 Power Virtual Agents has a comprehensive set of analytics that show you the key performance indicators for your bot.
 

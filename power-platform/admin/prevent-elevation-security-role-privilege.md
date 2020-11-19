@@ -7,7 +7,7 @@ ms.reviewer: jimholtz
 ms.service: power-platform
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 07/22/2020
+ms.date: 09/09/2020
 search.audienceType: 
   - admin
 search.app:
@@ -17,6 +17,8 @@ search.app:
   - Flow
 ---
 # Create an administrative user and prevent elevation of security role privilege
+
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 The [copy security role method](copy-security-role.md) is a quick and easy way to create a new security role based on an existing set of privileges. However, security role privileges can change with product updates which could render the new security role out-of-date and might not function as expected. This is especially true in the case where you want to allow [a certain group of administrative users](create-users-assign-online-security-roles.md#create-an-administrative-user-account) to assign security roles to your users.  We recommend you not copy the System Administrator security role and assign it to users, since this would allow the users to elevate the assigned user to System Administrators.  In addition, newer privileges from product updates will not be automatically added to the copied System Administrator security role resulting in the role having insufficient privileges to continue to assign security roles.
 
@@ -62,7 +64,7 @@ The following steps describe a method to create a new custom security role with 
 6. Choose **OK**.
 
 > [!NOTE]
-> Model-driven apps in Dynamics 365, such as Dynamics 365 Sales and Customer Service, are designed to prevent any elevation of security role privileges. Therefore, the administrative user **cannot** assign System Administrator, System Customizer, or any security roles that have a higher privilege.
+> The customer engagement apps (Dynamics 365 Sales, Dynamics 365 Customer Service, Dynamics 365 Field Service, Dynamics 365 Marketing, and Dynamics 365 Project Service Automation), are designed to prevent any elevation of security role privileges. Therefore, the administrative user **cannot** assign System Administrator, System Customizer, or any security roles that have a higher privilege.
 >
 > The above steps are for assigning roles to users who belong to the same Business Unit (BU) as the administrative user.  To assign roles to child BU users, the administrative user's privileges need to have Deep (Parent:Child Business Units) privilege level for all the privileges of the child BU user. 
 

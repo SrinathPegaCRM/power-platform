@@ -18,6 +18,8 @@ search.app:
 ---
 # Field-level security to control access
 
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 <!-- legacy procedure -->
 
 Record-level permissions are granted at the entity level, but you may have certain fields associated with an entity that contain data that is more sensitive than the other fields. For these situations, you use field-level security to control access to specific fields.  
@@ -117,7 +119,7 @@ Any users not defined in the previously created field security profiles will not
  Every field in the system contains a setting for whether field security is allowed. You can view this in the field definition from Solution Explorer. In Solution Explorer expand **Entities**, expand the entity that you want, select **Fields**, and then open the field that you want. If **Enable** can be selected, the field can be enabled for field security. 
 
 > [!div class="mx-imgBorder"] 
-> ![](media/field-security-enabled.png "Field security enabled")
+> ![Field security enabled](media/field-security-enabled.png "Field security enabled")
  
 Although most attributes can be secured, there are system attributes, such as IDs, timestamps, and record tracking attributes, that can't. Below are a few examples of attributes that can't be enabled for field security. 
 -    ownerid, processid, stageid, accountid, contactid

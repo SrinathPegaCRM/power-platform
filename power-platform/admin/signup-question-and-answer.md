@@ -2,11 +2,10 @@
 title: Manage licenses in your organization | Microsoft Docs
 description: Common questions and answers about licenses, administration, and users signing up for Power Apps in your Microsoft 365 tenant
 author: jimholtz
-manager: kvivek
 ms.service: power-platform
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 12/18/2019
+ms.date: 09/10/2020
 ms.author: jimholtz
 search.audienceType: 
   - admin
@@ -17,7 +16,7 @@ search.app:
   - Flow
 ---
 
-# Manage Power Apps licenses in your organization
+# Manage Power Apps licenses in your organization 
 
 This topic describes how users in your organization can get access to use Power Apps, and how you can control access to the Power Apps service.
 
@@ -37,7 +36,7 @@ Users can sign up by going to [powerapps.microsoft.com](https://powerapps.micros
 When a user in your organization signs up for Power Apps, that user is assigned a Power Apps license automatically.
 
 > [!NOTE]
-> Users who sign up for a trial license from within Power Apps don't appear in the Microsoft 365 admin portal as Power Apps trial users (unless they have another license to Microsoft 365, model-driven apps in Dynamics 365, such as Dynamics 365 Sales and Customer Service, or Power Apps).
+> Users who sign up for a trial license from within Power Apps don't appear in the Microsoft 365 admin portal as Power Apps trial users (unless they have another license to Microsoft 365, customer engagement apps (Dynamics 365 Sales, Dynamics 365 Customer Service, Dynamics 365 Field Service, Dynamics 365 Marketing, and Dynamics 365 Project Service Automation), or Power Apps).
 
 See [Self-service sign up for Power Apps](/powerapps/maker/signup-for-powerapps) for more details.
 
@@ -91,7 +90,7 @@ If a user has access to Power Apps through their Microsoft 365 and Dynamics 365 
 
     ![Remove service plan](./media/signup-question-and-answer/remove-service-plan.png)
 
-Bulk removal of licenses is also possible through PowerShell. See [Remove licenses from user accounts with Office 365 PowerShell](https://technet.microsoft.com/library/dn771774.aspx) for a detailed example.   Finally, further guidance about bulk removal of services within a license can be found at [Disable access to services with Office 365 PowerShell](https://technet.microsoft.com/library/dn771769.aspx).
+Bulk removal of licenses is also possible through PowerShell. See [Remove Microsoft 365 licenses from user accounts with PowerShell](https://technet.microsoft.com/library/dn771774.aspx) for a detailed example.   Finally, further guidance about bulk removal of services within a license can be found at [Disable access to Microsoft 365 services with PowerShell](https://technet.microsoft.com/library/dn771769.aspx).
 
 Removing of the Power Apps license or service for a user in your organization will also result in the removal of the Power Apps and Dynamics 365 icons from the following locations for that user:
 
@@ -105,7 +104,7 @@ Removing of the Power Apps license or service for a user in your organization wi
 ### How can I restrict my users' ability to access my organization's business data using Power Apps?
 Power Apps allows you to create data zones for business and non-business data, as shown below.  Once these data loss prevention policies are implemented, users are prevented from designing or running Power Apps that combine business and non-business data. For more details, See [Data loss prevention (DLP) policies](prevent-data-loss.md).
 
-![Data loss prevention policies](./media/signup-question-and-answer/data-loss-prevention-policy.png)
+![Data loss prevention policies](./media/dlp-assign-connectors.png) 
 
 ### Why did 10,000 licenses for Microsoft Power Apps show up in my Microsoft 365 tenant?
 As a qualifying organization, users in your organization are eligible to try out Microsoft Power Apps  for 30 days, and these trial licenses represent the available capacity for new Power Apps users in your tenant. There is no charge for these licenses. Specifically, there are two possible reasons why you may see a capacity 10,000 (trial) licenses for Power Apps showing up in the Microsoft 365 admin portal:
@@ -127,7 +126,7 @@ If your organization already has an existing Microsoft 365 environment and all u
 
 If your organization already has an existing Microsoft 365 environment but not all users in your organization have Microsoft 365 accounts, then we create a user in the tenant and assign licenses based on the user's work or school email address. This means that the number of users you are managing at any particular time will grow as users in your organization sign up for the service.
 
-If your organization does not have an Microsoft 365 environment connected to your email domain, there is no change in how you manage identity. Users will be added to a new, cloud-only user directory, and you will have the option to take over as the Power Platform service admin and manage them.
+If your organization does not have an Microsoft 365 environment connected to your email domain, there is no change in how you manage identity. Users will be added to a new, cloud-only user directory, and you will have the option to take over as the Power Platform admin and manage them.
 
 ### What is the process to manage a tenant created by Microsoft for my users?
 If a tenant was created by Microsoft, you can claim and manage that tenant using the following steps:
@@ -149,4 +148,4 @@ If you want all users to be in the same tenant regardless of their email address
 * Create a target tenant ahead of time or use an existing tenant. Add all the existing domains and subdomains that you want consolidated within that tenant. Then all the users with email addresses ending in those domains and subdomains automatically join the target tenant when they sign up.
 
 > [!IMPORTANT]
-> There is no supported automated mechanism to move users across tenants once they have been created. To learn about adding domains to a single Microsoft 365 tenant, see [Add your users and domain to Office 365](https://support.office.com/article/Add-your-users-and-domain-to-Office-365-ffdb2216-330d-4d73-832b-3e31bcb5b2a7).
+> There is no supported automated mechanism to move users across tenants once they have been created. To learn about adding domains to a single Microsoft 365 tenant, see [Add a domain to Microsoft 365](https://support.office.com/article/Add-your-users-and-domain-to-Office-365-ffdb2216-330d-4d73-832b-3e31bcb5b2a7).
